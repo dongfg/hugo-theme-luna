@@ -5,7 +5,7 @@
     <script type="text/javascript" src="{{- $script.RelPermalink -}}" defer></script>
 {{- else -}}
     {{- $script := $script | fingerprint -}}
-    <script type="text/javascript" src="{{- print $public_cdn $script.RelPermalink -}}" defer integrity="{{- $script.Data.Integrity -}}"></script>
+    <script type="text/javascript" src="{{- print $public_cdn $script.RelPermalink -}}" defer integrity="{{- $script.Data.Integrity -}}" crossorigin="anonymous"></script>
 {{- end -}}
 
 {{- $sass := resources.Get "sass/translateelement.scss" -}}

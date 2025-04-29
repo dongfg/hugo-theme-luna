@@ -12,6 +12,7 @@
         type="text/javascript"
         src="{{- print $public_cdn $customScript.RelPermalink -}}"
         integrity="{{- $customScript.Data.Integrity -}}"
+        crossorigin="anonymous"
         {{- if .Site.Params.customScript.pjax -}}data-swup-reload-script{{- end -}}
     ></script>
 {{- end -}}
